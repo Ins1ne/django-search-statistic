@@ -17,7 +17,7 @@ setup(
     ],
     include_package_data=True,
     license='GNU v2 License',
-    description='Provide search statistic.',
+    description='Provide search statistic for Django framework.',
     long_description=README,
     url='http://django-search-statistic.beslave.net/',
     author='Vladislav Lozhechnik',
