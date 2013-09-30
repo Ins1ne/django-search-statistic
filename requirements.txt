@@ -1,0 +1,4 @@
+django==1.5.4
+mysql-python==1.2.4
+redis==2.8.0
+south==0.8.2
