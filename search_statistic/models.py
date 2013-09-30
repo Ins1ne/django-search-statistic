@@ -95,6 +95,14 @@ class Visit(models.Model):
         auto_now_add=True
     )
 
+    @classmethod
+    def top(cls):
+        query = cls.objects.all().query
+        query.group_by = ['path', 'query_id']
+        qs = models.query.QuerySet(query=query, model=cls).annotate(
+            whole_amount=models.Sum('amount')
+        ).filter(query__confirm=True).order_by('-amount')
+        return qs
 
     def __unicode__(self):
         return u'{}: {} ==>> {}'.format(

@@ -1,5 +1,6 @@
 # coding: utf-8
 from django import forms
+from django.utils.translation import ugettext_lazy as _
 from search_statistic.models import SearchQuery, Visit
 
 
@@ -11,7 +12,7 @@ class SearchQueryForm(forms.ModelForm):
 
 class VisitForm(forms.ModelForm):
 
-    visited_object = forms.CharField()
+    visited_object = forms.CharField(label=_('visited object'))
 
     def __init__(self, *a, **k):
         super(VisitForm, self).__init__(*a, **k)
