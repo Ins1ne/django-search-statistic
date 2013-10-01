@@ -10,7 +10,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='django-search-statistic',
-    version='0.0.1',
+    version='0.0.2',
     packages=['search_statistic', 'search_statistic.migrations', 'search_statistic.utils'],
     install_requires=[
         'django>=1.4.5',
