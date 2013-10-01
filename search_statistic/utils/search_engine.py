@@ -78,7 +78,7 @@ class BingEngine(SearchEngine):
 class SearchYahooEngine(SearchEngine):
 
     verbose_name = _('yahoo search')
-    key = 'bing'
+    key = 'yahoo'
     host_pattern = re.compile('.*search\.yahoo\..*')
     query_parameter = 'p'
 
